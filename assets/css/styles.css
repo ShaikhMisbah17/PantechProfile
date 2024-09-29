@@ -1,0 +1,217 @@
+body {
+  width: 100%;
+  margin: 0;
+  background: linear-gradient(to right, rgb(15, 15, 188), rgb(176, 137, 144));
+}
+
+header,
+footer {
+  width: 100%;
+  background: linear-gradient(to left, rgb(234, 141, 11), rgb(234, 45, 225));
+  font-size: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  padding-top: 10px;
+}
+
+footer {
+  padding: 5px;
+  font-size: 30px;
+  word-spacing: 3px;
+}
+
+.introduction {
+  margin-top: 30px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande";
+  font-size: 25px;
+  line-height: 2;
+  color: white;
+}
+
+hr {
+  margin: 30px 30px;
+  width: 50%;
+}
+
+.section-1,
+.section-2,
+.section-3,
+.section-4 {
+  margin-top: 15px;
+}
+
+.section-1 > p {
+  width: 50%;
+  margin-top: 10px;
+  font-size: 40px;
+  color: rgba(245, 245, 245, 0.604);
+  text-align: center;
+}
+
+img {
+  border-radius: 75%;
+  box-shadow: 3px 4px 4px black;
+}
+
+.dark-mode-toggle > .fa-moon-o {
+  padding: 5px 5px;
+  color: black;
+}
+
+.fa-envelope,
+.fa-linkedin-square {
+  font-size: 60px;
+  background-color: orange;
+  color: aliceblue;
+  border-radius: 50%;
+  padding: 15px;
+  margin: 0 10px;
+}
+
+.fa-linkedin-square {
+  background: rgb(43, 183, 234);
+}
+
+.fa-envelope:hover,
+.fa-linkedin-square:hover {
+  transform: scale(1.1);
+}
+
+.education {
+  display: flex;
+  width: 50%;
+  justify-content: center;
+  column-gap: 50px;
+}
+
+.education > p {
+  margin-top: 20px;
+  box-shadow: 0 2px 2px 2px rgb(38, 3, 3);
+  padding: 5px;
+  font-size: 17px;
+  animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-15px);
+  }
+}
+
+.skill-icons {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  margin-right: 20px;
+}
+
+.horizontal-scroll {
+  overflow-x: hidden; /* Hide any overflowing content */
+  width: 60%; /* Occupy full width of the screen */
+}
+
+.icon-container {
+  animation: scrollAnimation 10s linear infinite; /* Adjust animation duration as needed */
+  width: max-content; /* Make the container width fit its content */
+}
+
+@keyframes scrollAnimation {
+  0% {
+    transform: translateX(
+      100vw
+    ); /* Start from the right edge of the viewport */
+  }
+  100% {
+    transform: translateX(-100%); /* Move to the left edge */
+  }
+}
+
+.section-4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 20px;
+}
+
+iframe:hover {
+  border: 2px solid black;
+}
+
+.section-4 > p:hover {
+  color: rgb(187, 11, 11);
+  transform: scale(1.6);
+}
+
+form {
+  background-color: cadetblue;
+  border: 2px solid black;
+  padding: 20px;
+  width: 350px;
+  box-shadow: 0px 2px 4px black;
+  border-radius: 10px;
+  margin: 30px 0px 0px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  border: 2px solid black;
+  padding: 4px;
+  border-radius: 5px;
+}
+
+form button {
+  color: black;
+  background-color: white;
+  font-size: 20px;
+  width: 50%;
+  padding: 10px;
+  border-radius: 5%;
+  border: 2px solid black;
+}
+
+form button:hover {
+  cursor: pointer;
+  background-color: grey;
+}
+
+@media (min-width: 412px) {
+  .intro {
+    font-family: "Lucida Grande";
+    font-size: 18px;
+    color: rgb(26, 1, 8);
+    line-height: 1.5;
+  }
+
+  .section-1 > p {
+    font-size: 14px;
+  }
+
+  footer {
+    padding: 4px;
+    font-size: 20px;
+    word-spacing: 1.8px;
+  }
+}
+
+/* CSS for Dark Mode */
+.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark-mode button {
+  background-color: #555;
+  color: #fff;
+}
+
+.dark-mode p {
+  color: wheat;
+}
